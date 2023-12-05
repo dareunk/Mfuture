@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"  content="IE=edge">
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/find.css">
+        <style>
+            body{
+                background-color: #1E1E1E;
+            }
+
+            #container{
+                width:1000px;
+                height:800px;
+            }
+    
+            #keywords div{
+        
+                grid-template-columns:minmax(200px, max-content) 1fr;
+                height:60px;
+                border-radius:30px;
+                background-color: white;
+                margin-top:30px;
+                display:inline-block;
+                margin-left:30px;
+            }
+            h1{
+                color:white;
+                padding-bottom:0px;
+                margin-top:10%;
+            
+            }
+            p{
+                margin:auto;
+                padding-top:15px;
+                font-size:150%;
+                padding-left:30px;
+                padding-right:30px;
+            }
+        </style>
+    </head>
+    <body>
+ 
+        <div id="container">
+            <h1>#  직업 키워드 검색</h1>
+            <div id="keywords">
+         
+                <% results.forEach(result => { %>
+                    <div>
+                       <p><%= result %></p>
+                    </div>
+            <% });%>
+            </div>
+      
+        
+           
+        </div>
+    </body>
+</html>
