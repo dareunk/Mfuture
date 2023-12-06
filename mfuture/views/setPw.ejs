@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"  content="IE=edge">
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/find.css">
+    </head>
+<body>
+    <div id="googleChat">
+        <h1> <span>GOOGLE</span><span>CHAT LIST</span></h1>
+    </div>
+    <div id="container">
+
+        <div id="options">
+            <div id="id"><a href="/find/id"><p>Email</p></a></div>
+            <div id="password"><a href="/find/pw"><p>Password</p></a></div>
+        </div>
+        <div id="contents">
+        <form action="/setpw" method="post">
+            <div id="box">
+		    <div id="error">
+		    <% if(flashMessages.error) { %>
+		    <p> <%= flashMessages.error %></p>
+		    <% } %>
+		    </div>
+            <div>
+                <label for="newPw">Password</label>
+                <input type="password" id="newPw" name="newPw">
+            </div>
+            
+            <div>
+                <label for="rePw">Re-Password</label>
+                <input type="password" id="rePw" name="rePw">
+            </div>
+       
+            </div>
+	    <div id="submitDiv">
+            <input type="submit" id="submit" name="submit" value="submit">
+	    </div>
+	    <div id="return">
+                <a href="">Go back to find ID</a>
+                <a href="">Go back to main page</a>
+            </div>     
+        </form>
+        </div>
+      
+    </div>
+
+</body>
+</html>

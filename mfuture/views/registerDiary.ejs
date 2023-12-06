@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"  content="IE=edge">
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+        <style>
+             body{
+                background-color: #1E1E1E;
+            }
+         
+            #container{
+                width:800px;
+                height:800px;
+                margin-top:10%;
+                margin-left:18%;
+               
+            }
+            label{
+                color:white;
+                font-size:180%;
+                margin-top:0px;
+                padding-right:50px;
+            }
+            #container div{
+                text-align: right;
+                margin-top:30px;
+            }
+
+            #content{
+                width: 500px;
+                height:200px;
+                border-radius: 30px;
+                padding-left:30px;
+
+            }
+            #date, #title{
+                width:500px;
+                height:60px;
+                border-radius: 30px;
+                font-size:180%;
+                color:#505050;
+                padding-left:30px;
+            
+            }
+            #submit{
+                width:100px;
+                height:60px;
+                border-radius: 30px;
+                font-size:180%;
+                background-color:#C32B2B;
+                color:white;
+                margin-top:30px;
+             
+            }
+            #error{
+                color:#C32B2B;
+            }
+        </style>
+	 <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+	</head>
+    <body>
+        <div id="container">
+            <form action="/myroom/register/diary" method="POST">
+            <div id="main">
+                <div>
+                    <label for="inputtitle">Title</label>
+                    <input type="text" id="title" name="title">
+                </div>
+                <div>
+                    <label for="inputcontent">Content</label>
+                    <input type="text" id="content" name="content">
+                    </div>
+                    <div>
+                        <label for="inputdate">Date</label>
+                        <input type="text" id="date" name="date" placeholder="yyyy-mm-dd">
+                    </div>
+                    <div id="error">
+                    <% if(flashMessages){ %>
+                        <% if(flashMessages.error){ %>
+                        <p><%= flashMessages.error %></p> 
+                        <% }} %>
+                    </div>
+                    <input type="submit" id="submit" value="등록">
+            </div>
+            </form>
+       
+        </div>
+    </body>
+</html>
+
+

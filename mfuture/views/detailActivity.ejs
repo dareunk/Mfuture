@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"  content="IE=edge">
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+        <style>
+                body{
+                background-color: #1E1E1E;
+            }
+            #container{
+                width:800px;
+                height:800px;
+                margin-top:10%;
+                margin-left:35%;
+            }
+  
+            #strings{
+                float:left;
+               width:100px;
+               height:100px;
+               margin-left:-200px;
+               margin-top:-10px;
+               
+            }
+            #strings p{
+                color:white;
+                font-size: 180%;
+                
+                padding:0px;
+            }
+            label{
+                color:white;
+                font-size:180%;
+                margin-top:0px;
+                padding-right:50px;
+            }
+        
+
+            #content{
+                width: 500px;
+                height:200px;
+                border-radius: 30px;
+                padding-left:30px;
+                background-color: #505050;
+                margin-top:30px;
+            }
+            #date_end, #date_start, #title{
+                width:500px;
+                height:60px;
+                border-radius: 30px;
+                font-size:180%;
+                background-color:#505050;
+                padding-left:30px;
+                margin-top:30px;
+            }
+            #submit{
+                width:100px;
+                height:60px;
+                border-radius: 30px;
+                font-size:180%;
+                background-color:#C32B2B;
+                color:white;
+                margin-top:40px;
+                margin-left:450px;
+             
+            }
+            #submit a{
+                text-decoration: none;
+            }
+            #submit p{
+                font-size:100%;
+                text-align:center;
+                padding-top:10px;
+            }
+            #error{
+                color:#C32B2B;
+            }
+            #title p, #content p, #date_start p, #date_end p{
+                color:white;
+                padding-top:15px;
+            }
+        </style>
+	 <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+	</head>
+    <body>
+        <div id="container">
+          <% if(total) {%>
+            <div id="strings"><p>title</p></div>
+            <div id="title">
+                <p><%= total.title %></p>
+            </div>
+            <div id="strings"><p>content</p></div>
+            <div id="content">
+                <p><%= total.content %></p>
+            </div>
+            <div id="strings"><p>date</p></div>
+            <div id="date_start">
+               <p><%= date_start %></p>
+            </div>
+            <div id="date_end">
+                <p><%=date_end %></p>
+            </div>
+            <div id="submit">
+                <a href="/myroom/activity"><p>닫기</p></a>
+            </div>
+            <% } else {%>
+                <h1> 등록되지 않은 활동입니다 </h1>
+            <% }; %>
+        </div>
+       
+    </body>
+</html>
+
+
