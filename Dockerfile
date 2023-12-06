@@ -4,7 +4,7 @@ ENV NODE_ENV="production"
 COPY ./mfuture/. /app
 WORKDIR /app
 
-RUN sudo npm install
+RUN npm install
 
 FROM bitnami/node:9-prod
 ENV NODE_ENV="production"
