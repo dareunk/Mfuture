@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mfuture
+  labels:
+    app: mfuture
+spec:
+  replicas: 3
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: mfuture
+  template:
+    metadata:
+      labels:
+        app: mfuture
+        tier: mfuture
+    spec:
+      containers:
+      - name: mfuture
+        image:  eunjinchoi11/mfuture:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+          name: hello
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mfuture
+  labels:
+    app: mfuture
+spec:
+  ports:
+  - port: 80
+    targetPort: 5000
+  selector:
+    app: mfuture
+    tier: mfuture
+  type: LoadBalancer
