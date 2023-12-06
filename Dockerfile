@@ -1,4 +1,4 @@
-FROM bitnami/node:9 as builder
+FROM bitnami/node:latest as builder
 ENV NODE_ENV="production"
 
 COPY ./mfuture/. /app
@@ -6,7 +6,7 @@ WORKDIR /app
 
 RUN npm install
 
-FROM bitnami/node:9-prod
+FROM bitnami/node:latest
 ENV NODE_ENV="production"
 COPY --from=builder /app /app
 WORKDIR /app
