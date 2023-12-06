@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"  content="IE=edge">
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+        
+        <style>
+            body{
+                background-color: #1E1E1E;
+            }
+            #logo img{
+            margin-left:20px;
+            width:60px;
+            height:50px;
+            float:left;
+         }
+            #logo p{
+            padding-top:10px;
+            margin-left:10px;
+            color:white;
+            font-size:150%;
+        }
+         .main{
+            margin-top:50px;
+            margin-left:10%;
+            color:white;
+            font-size:150%;
+          }
+          .sub{
+            font-size:100%;
+            margin-top:-10px;
+            padding-top:0px;
+            margin-left:10%;
+            color:rgb(190, 190, 190);
+          }
+         #subdescription{
+              color:white;
+              font-size:150%;
+              margin-left:20%;
+              margin-top:30px;
+              float:left;
+          }
+        #container{
+              margin-left:30%;
+              margin-top:30px;
+             
+          }
+          #box{
+              width:900px;
+              text-align:center;
+              
+
+          }
+         button {
+             width:200px;
+             height:50px;
+             background-color: white;
+             border-radius:100px;
+             float:left;
+             margin-left:50px;
+             margin-top:20px;
+            
+             font-size:120%;
+             color:#1E1E1E;
+          
+         }
+         .space{
+             width:900px;
+             height:45px;
+             display:inline-block;
+         }
+     
+         #submit{
+            width:100px;
+             height:50px;
+             background-color: white;
+             border-radius:100px;
+             margin-left:20px;
+             margin-top:160px;
+
+
+         }
+        </style>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script>
+            /*
+            $(document).on('click','button',function(){
+                   
+                alert("클릭이벤트");
+                    
+                const newColor = document.getElementById("tag");
+
+                newColor.style.backgroundColor = "black"
+
+            });
+            */
+       
+            $(document).on('click','button',function(e){
+                if(test){
+                    initialColor();
+                }
+                var test = e.target.id;
+                $(e.target).css({"background-color":"#C32B2B","color":"white"});
+                
+                document.getElementById("major").value = test;
+                
+            })
+        </script>
+    </head>
+    <body>
+        <div id ="logo">
+            <img src="/image/logo.png" alt="logo">
+            <p>HASH TAG</p>
+        </div>
+        <div id="description">
+            <p class="main"># 해시태그를 선택하세요(한 개 선택 가능) </p>
+            <p class="sub">( 복수전공인 경우 ) 취업을 희망하는 전공으로 선택</p>
+            <p class="sub">여러 개 선택하는 경우 마지막 선택하는 것을 기준으로 입력, 나중에 변경 가능</p>
+        </div>
+        <p id="subdescription">전공</p>
+
+        <div id="container">
+            <div id="box">
+                <button class="button" id="tag1">컴퓨터공학과</button>
+                <button class="button" id="tag2" >컴퓨터공학과</button>
+                <button class="button" id="tag3" >컴퓨터공학과</button>
+            </div>
+            <div id="box">
+                <button class="button" id="tag1">컴퓨터공학과</button>
+                <button class="button" id="tag2" >컴퓨터공학과</button>
+                <button class="button" id="tag3" >컴퓨터공학과</button>
+            </div>
+            <div id="box">
+                <button class="button" id="tag1">컴퓨터공학과</button>
+                <button class="button" id="tag2" >컴퓨터공학과</button>
+                <button class="button" id="tag3" >컴퓨터공학과</button>
+            </div>
+            <div class="space"></div>
+            <div id="box">
+                <button class="button" id="tag1">컴퓨터공학과</button>
+                <button class="button" id="tag2" >컴퓨터공학과</button>
+                <button class="button" id="tag3" >컴퓨터공학과</button>
+            </div>
+            <div id="box">
+                <button class="button" id="tag1">컴퓨터공학과</button>
+                <button class="button" id="tag2" >컴퓨터공학과</button>
+                <button class="button" id="tag3" >컴퓨터공학과</button>
+            </div>
+            <div id="box">
+                <button class="button" id="tag1">컴퓨터공학과</button>
+                <button class="button" id="tag2" >컴퓨터공학과</button>
+                <button class="button" id="tag3" >컴퓨터공학과</button>
+            </div>
+        </div>
+        <form action="/hashtag/major" method="POST">
+            <input type="hidden" name="major" id="major" value="">
+            <input type="submit" id="submit" value="제출">
+        </form>
+       
+    </body>
+</html>

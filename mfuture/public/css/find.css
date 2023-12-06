@@ -1,0 +1,118 @@
+
+body{
+    background-color:#1E1E1E;
+}
+#chat{
+    text-align: center;
+     margin-top:10%;
+     margin-bottom:0px;
+ }
+
+ label{
+     color:white;
+     font-size:200%;
+     padding-right:100px;
+ }
+ p{
+     text-align:center;
+ }
+ #container{
+                    
+     width:1000px;
+     height:600px;
+     margin:auto;
+     position:relative;
+ }
+  #options{
+      width:1000px;
+      height:100px;
+      position:absolute;
+      margin-bottom:0px;
+                    
+  }
+  #contents{
+      position:absolute;
+      width:996px;
+      height: 380px;
+      margin-top:80px;
+      text-align: right;
+      border:1px solid white;
+      border-radius:0px 0px 50px 50px;
+      border-top:none;
+                   
+  }
+  #id{
+      background-color: #C32B2B;
+      width:50%;
+      height:80px;
+      float:left;
+      border-radius: 50px 0px 0px 0px;
+                      
+  }
+  #password{
+      background-color: #505050;
+      width:50%;
+      height:80px;
+      float:right;
+      border-radius: 0px 50px 0px 0px;
+  }
+  #contents #box{
+      padding-top:40px;
+                     
+  }
+  #box div{
+       margin-top:30px;
+       margin-bottom:0px;
+        margin-right:170px;
+                    }
+#firstName, #lastName, #phone, #inputemail, #code, #newPw, #rePw{
+    height:40px;
+   width:350px;
+    border-radius:100px;
+}
+a{
+text-decoration-line: none;
+}
+p{
+   color:black;
+   font-size:200%;
+   font-weight: bold;
+   margin-top:3%;
+}
+#submit{
+   width:150px;
+    height:40px;
+   border-radius:100px;
+   margin-top:30px;
+   margin-right:50px;
+   background-color:white;
+                                    
+}
+#result{
+   margin-top:10%;
+   padding-left:20px;
+   padding-right:20px;
+}
+#contents p{
+   color: white;
+   font-size:200%;
+}
+#return a{
+   color: #C32B2B;
+   font-size:150%;
+   margin-right:50px;
+}
+#getCode{
+    width:100px;
+    height:40px;
+    border-radius:100px;
+        margin-top:5px;
+    background-color:#C32B2B;
+    margin-right:180px;;
+                   
+}
+#error p{
+   color:red;
+   text-align:center;
+}
+
