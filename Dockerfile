@@ -1,7 +1,7 @@
 FROM bitnami/node:9 as builder
 ENV NODE_ENV="production"
 
-COPY ./mfuture/ /app
+COPY ./mfuture/. /app
 WORKDIR /app
 
 RUN npm install
