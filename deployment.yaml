@@ -19,7 +19,7 @@ spec:
     spec:
      containers:
       - name: mfuture
-        image:  eunjinchoi11/mfuture:latest
+        image: eunjinchoi11/mfuture:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
