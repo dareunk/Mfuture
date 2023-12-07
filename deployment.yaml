@@ -17,6 +17,10 @@ spec:
         app: mfuture
         tier: mfuture
     spec:
+      volumes:
+      - name: mfuture_volume1
+        secret: 
+          secretName: mfuture1
       containers:
       - name: mfuture
         image:  eunjinchoi11/mfuture:latest
@@ -24,6 +28,10 @@ spec:
         ports:
         - containerPort: 5000
           name: hello
+        volumeMounts:
+         - name: mfuture_volume1
+           readOnly: true
+           mounthPath: /etc/config
 ---
 apiVersion: v1
 kind: Service
