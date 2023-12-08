@@ -24,6 +24,15 @@ spec:
         ports:
         - containerPort: 5000
           name: mfuture
+        env:
+        - name: DB_HOST
+          value: 127.0.0.1
+        - name: DB_USER
+          value: root
+        - name: DB_PORT
+          value: 30306
+        - name: DB_PW
+          value: mfuture!
 ---
 apiVersion: v1
 kind: Service
