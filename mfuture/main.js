@@ -27,7 +27,7 @@ const GoogleStrategy = require("passport-google-oauth2").Strategy;
 const clientID = process.env.GOOGLE_CLIENT_ID,
 	clientSecret = process.env.GOOGLE_CLIENT_SECRET,
 	clientRedirectUrl = process.env.GOOGLE_REDIRECT_URL;
-
+const PORT = process.env.PORT || 80;
 const multer = require("multer");
 const path = require("path");
 const Buffer = require("buffer/").Buffer;
@@ -449,6 +449,5 @@ app.use((err,req,res,next)=>{
 	
 });
 */
-server.listen(port);
-console.log(`The server has started and is listening on the port number: ${port}`);
-
+server.listen(PORT);
+console.log("Running on the port number:" + PORT);
