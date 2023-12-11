@@ -109,9 +109,6 @@ app.use(expressSession({
 	},
 	resave:false,
 	saveUninitialized:true,
-     cookie: {
-      maxAge: 24 * 6 * 60 * 10000,
-    },
 }));
 app.use(connectFlash());
 app.use(
