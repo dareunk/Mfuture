@@ -180,7 +180,7 @@ passport.use(new LocalStrategy({
 passport.use(new GoogleStrategy({
 	clientID: clientID,
 	clientSecret: clientSecret,
-	callbackURL: '/login/google/callback',
+	callbackURL: clientRedirectUrl,
 	passReqToCallback: true,
 }, async function(request, accessToken, refreshToken, profile, done) {
 	//console.log(profile);
