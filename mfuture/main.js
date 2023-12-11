@@ -108,8 +108,15 @@ app.use(expressSession({
 		maxAge:4000000
 	},
 	resave:false,
-	saveUninitialized:true
-
+	saveUninitialized:true,
+     cookie: {
+      domain: true,
+      path: '/',
+      maxAge: 24 * 6 * 60 * 10000,
+      sameSite: 'None',
+      httpOnly: true,
+      secure: true,
+    },
 }));
 app.use(connectFlash());
 app.use(
@@ -366,7 +373,7 @@ app.get("/myroom/openRecruitment", async(req,res,next) => {
 		);
 
 	}else{
-		res.render("logIn");
+		res.render("login");
 	}
 });
 
