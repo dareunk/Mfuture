@@ -108,7 +108,7 @@ module.exports = {
 			res.locals.chatrooms = chatRooms;
 			res.render("chatRooms");
 		}else{
-			res.render("logIn");
+			res.render("login");
 		}
 	},
 	createChatRoom: async(req,res) => {
@@ -237,7 +237,7 @@ module.exports = {
 		res.locals.profile = profile;
 		res.render("myroomToDo");
 		}else{
-			res.render("logIn");
+			res.render("login");
 		}
 	},
 	myroomToDoView: (req,res) => {
@@ -287,7 +287,7 @@ module.exports = {
 			res.locals.profile = userInfo.profile;;
 			res.render("myroomDiary");
 		}else{
-			res.render("logIn");
+			res.render("login");
 		}
 	
 	},
@@ -327,7 +327,7 @@ module.exports = {
 	}
 	next(); 
 		}else{
-			res.render("logIn");
+			res.render("login");
 		}
 	
 	},
@@ -369,7 +369,7 @@ module.exports = {
 			res.locals.profile = userInfo.profile;;
 			res.render("myroomActivity");
 		}else{
-			res.render("logIn");
+			res.render("login");
 		}
 	
 	},
@@ -414,7 +414,7 @@ module.exports = {
 			}
 			next(); 
 				}else{
-					res.render("logIn");
+					res.render("login");
 				}
 	},
 	
