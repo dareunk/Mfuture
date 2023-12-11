@@ -435,11 +435,12 @@ app.get("/myroom/activity",homeController.myroomActivityView);
 app.get("/myroom/register/activity", homeController.registerActivityView);
 app.post("/myroom/register/activity",homeController.registerMyroomActivity, homeController.redirectView);
 app.get("/myroom/activity/detail/:id",homeController.myroomActivityDetail);
+/*
 app.use((req,res,next)=>{
 	const err = new BaseError(statusCode.status.NOT_FOUND);
 	next(err);
 });
-/*
+*/
 app.use((err,req,res,next)=>{
 	if(err){
 	
@@ -447,6 +448,6 @@ app.use((err,req,res,next)=>{
 	}
 	
 });
-*/
+
 server.listen(PORT);
 console.log("Running on the port number:" + PORT);
