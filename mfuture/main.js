@@ -110,12 +110,7 @@ app.use(expressSession({
 	resave:false,
 	saveUninitialized:true,
      cookie: {
-      domain: true,
-      path: '/',
       maxAge: 24 * 6 * 60 * 10000,
-      sameSite: 'None',
-      httpOnly: true,
-      secure: true,
     },
 }));
 app.use(connectFlash());
