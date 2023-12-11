@@ -108,7 +108,7 @@ app.use(expressSession({
 		maxAge:4000000
 	},
 	resave:false,
-	saveUninitialized:true,
+	saveUninitialized:true
 }));
 app.use(connectFlash());
 app.use(
