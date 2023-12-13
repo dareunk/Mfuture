@@ -269,6 +269,7 @@ module.exports = {
 		next(); 
 	},
 	myroomDiary: async(req,res,nex) => {
+		console.log(`res.locals.loggedIn: ${res.locals.loggedIn}`);
 		if(res.locals.loggedIn){
 			res.locals.authentication = req.isAuthenticated();
 			const diarys = await Diary.findAll({
