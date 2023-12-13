@@ -103,7 +103,7 @@ module.exports = {
 		console.log(req.user);
 		console.log(req.isAuthenticated());
 		res.locals.authentication = req.isAuthenticated();
-		if(req.isAuthenticated()){
+		if(res.locals.loggedIn){
 			const chatRooms = await ChatRoom.findAll();
 			res.locals.chatrooms = chatRooms;
 			res.render("chatRooms");
@@ -211,7 +211,7 @@ module.exports = {
 		next();
 	},
 	myroomToDo: async(req,res,next) => {
-		if(req.isAuthenticated()){
+		if(res.locals.loggedIn){
 		res.locals.authentication = req.isAuthenticated();
 		console.log(req.user.email);
 		const todoList = await Todo.findAll({
@@ -269,7 +269,7 @@ module.exports = {
 		next(); 
 	},
 	myroomDiary: async(req,res,nex) => {
-		if(req.isAuthenticated()){
+		if(res.locals.loggedIn){
 			res.locals.authentication = req.isAuthenticated();
 			const diarys = await Diary.findAll({
 				where:{
@@ -295,7 +295,7 @@ module.exports = {
 		res.render("registerDiary");
 	},
 	registerMyroomDiary: async(req,res,next) => {
-		if(req.isAuthenticated()){
+		if(res.locals.loggedIn){
 			
 	//console.log(req.user.email);
 	const date = req.body.date;
@@ -351,7 +351,7 @@ module.exports = {
 		
 	},
 	myroomActivityView: async(req,res)=>{
-		if(req.isAuthenticated()){
+		if(res.locals.loggedIn){
 			res.locals.authentication = req.isAuthenticated();
 			const activities = await Activity.findAll({
 				where:{
@@ -377,7 +377,7 @@ module.exports = {
 		res.render("registerActivity");
 	},
 	registerMyroomActivity: async(req,res,next) => {
-		if(req.isAuthenticated()){
+		if(res.locals.loggedIn){
 			//console.log(req.user.email);
 			const date1 = req.body.date_start;
 			console.log(date1);
