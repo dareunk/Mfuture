@@ -26,7 +26,7 @@ spec:
           name: mfuture
         env:
         - name: DB_HOST
-          value: "34.64.139.181"
+          value: "mysql-service"
         - name: DB_USER
           value: "root"
         - name: DB_PW
@@ -117,14 +117,16 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mysql-nodeport
-  labels: 
-   app: mysql
-   tier: database
+  name: mysql-service
+  labels:
+    app: mysql
+    tier: database
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
-  - port: 3306
-    nodePort: 30306
+  - name: mysql-http
+    port: 30306
+    targetPort: 3306
   selector:
     app: mysql
+    tier: database
