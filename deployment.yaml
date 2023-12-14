@@ -47,6 +47,10 @@ spec:
   selector:
     app: mfuture
     tier: mfuture
+  sessionAffinity: ClientIP
+  sessionAffinityConfig:
+     clientIP:
+       timeoutSeconds: 10800
   type: LoadBalancer
 ---
 apiVersion: v1
