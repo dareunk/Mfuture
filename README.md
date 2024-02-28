@@ -1,4 +1,4 @@
-<h1>개인 풀스텍 프로젝트 - Mfuture</h1>
+<h1>개인 풀스택 프로젝트 - Mfuture</h1>
 
 ![Desktop - 1 (2)](https://github.com/dareunk/mfuture/assets/83913407/a3aa46a1-630f-4fce-bfbb-ff55190ca234)
 
@@ -31,8 +31,9 @@
 <h2>개발 환경</h2>
 <h3>Back-end</h3>
 <div align=center>
-<img src="https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white">
+<img src="https://img.shields.io/badge/express-C32B2B?style=for-the-badge&logo=express&logoColor=white">
 <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">
+<img src="https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101">
 </div>
 <h3>Front-end</h3>
 <div align=center> 
@@ -71,7 +72,14 @@
 
 <br>
 <br>
-<h2> Mfuture 배포 환경<h2>
+<h2>Mfuture 주요 API</h2>
+
+![Desktop - 3](https://github.com/dareunk/mfuture/assets/83913407/66afef5c-035a-402d-95d8-e59ac486ac16)
+
+
+<br>
+<br>
+<h2> Mfuture 배포 환경</h2>
   
 ![Desktop - 9](https://github.com/dareunk/mfuture/assets/83913407/4597683e-16fc-4d8b-a840-eb5f696f32ce)
 
@@ -95,10 +103,8 @@
 |Hotfix#4| main.js에서 존재하는 syntax error을처리(ex. logIn → login), port의 설정을 바꿔줌|
 |Hotfix#5| session으로 인해 발생하는 서비스 장애를 처리, sessionAffinity를 추가main 정상적으로 작동하는 코드를 다른branch로부터 pull request를 받아 배포|
 
-
 <br>
 <br>
-<h2>Mfuture 주요 API</h2>
+<h2>CI/CD 테스트 영상</h2>
 
-![Desktop - 3](https://github.com/dareunk/mfuture/assets/83913407/66afef5c-035a-402d-95d8-e59ac486ac16)
-
+[Mfuture CI/CD 테스트 영상](https://youtu.be/l-DboBvQVGo)
