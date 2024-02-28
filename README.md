@@ -1,6 +1,7 @@
 <h1>개인 풀스텍 프로젝트 - Mfuture</h1>
 
-![Desktop - 1](https://github.com/dareunk/mfuture/assets/83913407/30f9e311-2b44-4307-ad40-be0383948f34)
+![Desktop - 1 (2)](https://github.com/dareunk/mfuture/assets/83913407/a3aa46a1-630f-4fce-bfbb-ff55190ca234)
+
 
 <h2> 프로젝트 소개 </h2>
 <b>프로젝트명 : Mfuture - 대학생과 직장인들을 대상으로 삶의 길잡이 역할을 해주는 서비스<br><br>
@@ -25,7 +26,8 @@
   - 맞춤형 취업 정보 확인
   - 직업 키워드 서비스
   - 사용자 간 정보 공유 채팅방
-  
+<br>
+<br>
 <h2>개발 환경</h2>
 <h3>Back-end</h3>
 <div align=center>
@@ -53,17 +55,50 @@
 <img src="https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white">
 </div>
 
+<br>
+<br>
 <h2> Mfuture 시연 영상</h2>
 
 ![오픈소스데모영상_은진](https://github.com/dareunk/mfuture/assets/83913407/838de3a6-9dab-4c94-ba3e-34871e2fbefe)
 
+[Mfuture 서비스 매뉴얼 보러가기](https://innovative-lead-4da.notion.site/Mfuture-97922cdcab724b1a8331aa72da1685ac?pvs=4)
 
+<br>
+<br>
+<h2>Mfuture 와이어프레임</h2>
+
+![image](https://github.com/dareunk/mfuture/assets/83913407/b6c02445-5a74-4d5c-804b-19827524f5c8)
+
+<br>
+<br>
 <h2> Mfuture 배포 환경<h2>
   
 ![Desktop - 9](https://github.com/dareunk/mfuture/assets/83913407/4597683e-16fc-4d8b-a840-eb5f696f32ce)
 
 ![Desktop - 8 (1)](https://github.com/dareunk/mfuture/assets/83913407/a91ac5a8-5bb4-463a-9528-7fae3ab9780a)
 
+<br>
+<br>
 <h2>Mfuture의 Github Workflow</h2>
   
 ![A4 - 1](https://github.com/dareunk/mfuture/assets/83913407/6bec8b1a-d8fc-446b-b3d3-63b364a551de)
+
+
+|브랜치명| 작업 내용|
+|-------|----------|
+|Local| local환경에서 구축한 Mfuture 코드를 업로드|
+|develop1| Mfuture pod의 base 이미지를 변경하고, deployment.yaml 파일의 소스코드를 재작성|
+|develop2| mysql의 데이터를 영구적으로 저장하기 위해 persistentVolumeClaim을 구축하여 deployment.yaml파일에 추가|
+|develop3| Sequelize의 기본 세팅을 변경|
+|develop5| Nodeport를 삭제하고 Cluster IP를 설정하여 웹 서비스 파드가 mysql 파드를 인식할 수 있도록 함|
+|Hofix#3| deployment.yaml 파일에서 발생한 에러들을 처리하고, 배포 환경에서 구글OAuth2.0 API를 사용할 수 있도록 설정|
+|Hotfix#4| main.js에서 존재하는 syntax error을처리(ex. logIn → login), port의 설정을 바꿔줌|
+|Hotfix#5| session으로 인해 발생하는 서비스 장애를 처리, sessionAffinity를 추가main 정상적으로 작동하는 코드를 다른branch로부터 pull request를 받아 배포|
+
+
+<br>
+<br>
+<h2>Mfuture 주요 API</h2>
+
+![Desktop - 3](https://github.com/dareunk/mfuture/assets/83913407/66afef5c-035a-402d-95d8-e59ac486ac16)
+
