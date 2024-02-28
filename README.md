@@ -46,6 +46,7 @@
 <h3>DB</h3>
 <div align=center>
 <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">  
+<img src="https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white">
 </div>
 <h3>Dev-Ops</h3>
 <div align=center>
